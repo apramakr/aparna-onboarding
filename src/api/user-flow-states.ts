@@ -69,7 +69,8 @@ export function useUserFlowStates(): {
     error,
   } = useSWR(
     publicApiKey && flows && userId
-      ? `${API_PREFIX}userFlowStates?foreignUserId=${encodeURIComponent(userId)}&apikey=${publicApiKey}`
+      // ? `${API_PREFIX}userFlowStates?foreignUserId=${encodeURIComponent(userId)}&apikey=${encodeURIComponent(publicApiKey)}`
+      ? `${API_PREFIX}userFlowStates?apikey=${encodeURIComponent(publicApiKey)}`
       : null,
     fetcher,
     {
