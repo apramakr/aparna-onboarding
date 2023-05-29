@@ -1,7 +1,9 @@
 import React, { useMemo } from 'react'
+
 import { FrigadeContext } from '../FrigadeProvider'
 
-export const API_PREFIX = 'https://api.frigade.com/v1/public/'
+// export const API_PREFIX = 'https://api.frigade.com/v1/public/'
+export const API_PREFIX = 'https://nhurzvelfmfieegdqinh.supabase.co/rest/v1/';
 
 export const NOT_STARTED_STEP = 'NOT_STARTED_STEP'
 export const COMPLETED_FLOW = 'COMPLETED_FLOW'

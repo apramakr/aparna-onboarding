@@ -1,7 +1,7 @@
 {
-  "name": "@frigade/react",
+  "name": "aparna-onboarding",
   "version": "0.0.1",
-  "description": "The official React SDK for Frigade.",
+  "description": "React SDK for onboarding.",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "files": [
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FrigadeHQ/frigade-react.git"
+    "url": "git+https://github.com/apramakr/aparna-onboarding.git"
   },
   "keywords": [
     "React",
