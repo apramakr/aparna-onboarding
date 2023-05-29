@@ -1,3 +1,7 @@
+import { useContext, useEffect, useState } from 'react'
+import useSWR from 'swr'
+
+import { FrigadeContext } from '../FrigadeProvider'
 import {
   API_PREFIX,
   COMPLETED_FLOW,
@@ -7,9 +11,6 @@ import {
   STARTED_FLOW,
   useConfig,
 } from './common'
-import { useContext, useEffect, useState } from 'react'
-import { FrigadeContext } from '../FrigadeProvider'
-import useSWR from 'swr'
 
 export interface PublicUserFlowState {
   flowId: string
@@ -68,7 +69,7 @@ export function useUserFlowStates(): {
     error,
   } = useSWR(
     publicApiKey && flows && userId
-      ? `${API_PREFIX}userFlowStates?foreignUserId=${encodeURIComponent(userId)}`
+      ? `${API_PREFIX}userFlowStates?foreignUserId=${encodeURIComponent(userId)}&apikey=${publicApiKey}`
       : null,
     fetcher,
     {

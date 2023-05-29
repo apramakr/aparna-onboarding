@@ -1,10 +1,11 @@
-import React, { createContext, FC, useEffect, useState } from 'react'
-import { ThemeProvider } from 'styled-components'
-import { DataFetcher } from '../components/DataFetcher'
-import { Flow } from '../api/flows'
-import { FlowResponse } from '../api/flow-responses'
-import { Appearance, DefaultAppearance } from '../types'
+import React, { FC, createContext, useEffect, useState } from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
+import { ThemeProvider } from 'styled-components'
+
+import { FlowResponse } from '../api/flow-responses'
+import { Flow } from '../api/flows'
+import { DataFetcher } from '../components/DataFetcher'
+import { Appearance, DefaultAppearance } from '../types'
 
 export interface IFrigadeContext {
   publicApiKey: string
@@ -54,30 +55,31 @@ export interface FrigadeProviderProps {
 }
 
 export const FrigadeContext = createContext<IFrigadeContext>({
-  publicApiKey: '',
-  setUserId: () => {},
+  // publicApiKey: '',
+  publicApiKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5odXJ6dmVsZm1maWVlZ2RxaW5oIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODQzOTE5MjYsImV4cCI6MTk5OTk2NzkyNn0.TotXlxXW6gdK8GTqEQUKsVuH0xM0jPlPlxWGEE1TZJU',
+  setUserId: () => { },
   flows: [],
-  setFlows: () => {},
+  setFlows: () => { },
   failedFlowResponses: [],
-  setFailedFlowResponses: () => {},
+  setFailedFlowResponses: () => { },
   flowResponses: [],
-  setFlowResponses: () => {},
+  setFlowResponses: () => { },
   userProperties: {},
-  setUserProperties: () => {},
+  setUserProperties: () => { },
   openFlowStates: {},
-  setOpenFlowStates: () => {},
+  setOpenFlowStates: () => { },
   customVariables: {},
-  setCustomVariables: () => {},
+  setCustomVariables: () => { },
   isNewGuestUser: false,
-  setIsNewGuestUser: () => {},
+  setIsNewGuestUser: () => { },
   hasActiveFullPageFlow: false,
-  setHasActiveFullPageFlow: () => {},
+  setHasActiveFullPageFlow: () => { },
   organizationId: '',
-  setOrganizationId: () => {},
-  navigate: () => {},
+  setOrganizationId: () => { },
+  navigate: () => { },
   defaultAppearance: DefaultAppearance,
   shouldGracefullyDegrade: false,
-  setShouldGracefullyDegrade: () => {},
+  setShouldGracefullyDegrade: () => { },
 })
 
 interface FrigadeConfig {

@@ -22,6 +22,7 @@ export function useConfig() {
     config: useMemo(
       () => ({
         headers: {
+          'apikey': `${publicApiKey}`,
           Authorization: `Bearer ${publicApiKey}`,
           'Content-Type': 'application/json',
         },
